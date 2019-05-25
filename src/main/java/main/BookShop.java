@@ -38,16 +38,21 @@ public class BookShop{
         int j = 0;
         Scanner sc = new Scanner(System.in);
         Cart c1 = new Cart();
+        System.out.println("Enter product name: ");
         take1 = sc.nextInt(); //product name
         while(take1 != -1){
+        	System.out.println("Enter quantity: ");
             take2 = sc.nextInt(); //quantity
             c1.updateCart(itemAvailable[take1-1], take2);
+            System.out.println("Enter product name: ");
             take1 = sc.nextInt();
             
         }
         sc.nextLine();
+        
         System.out.println("type your name to generate the bill :");
         String s = sc.nextLine();
+        
         CustomerName cn = new CustomerName();
         cn.setName(s);
         
